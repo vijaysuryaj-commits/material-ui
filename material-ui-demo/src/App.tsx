@@ -5,6 +5,7 @@ import UseMediaQueryEx from "./Components/UseMediaQueryEx"
 import LinkEx from "./Components/LinkEx"
 import MenuEx from "./Components/MenuEx"
 import SkeletonEx from "./Components/SkeletonEx"
+import CustomThemeExample from "./Components/CreateThemeEx"
 
 // import MuiTypography from "./Components/MuiTypography"
 // import { MuiTextField } from "./Components/MuiTextField"
@@ -53,6 +54,7 @@ function App() {
       <LinkEx />
       <MenuEx/>
       <SkeletonEx />
+      <CustomThemeExample ></CustomThemeExample>
     </>
   )
 }
