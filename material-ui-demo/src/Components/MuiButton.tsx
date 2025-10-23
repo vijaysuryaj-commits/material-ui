@@ -109,40 +109,59 @@
 
 //toggle only one option at a time
 
-import { Stack, ToggleButton, ToggleButtonGroup } from '@mui/material'
-import { useState } from 'react';
+import React from 'react';
+import { Stack, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
 
-const MuiButton = () => {
-
-    const [formats, setFormats] = useState<String | null>(null)
-    console.log({
-        formats,
-    })
-    const handleToggle = (_event: React.MouseEvent<HTMLElement>, updatedFormats: string | null) => {
-        setFormats(updatedFormats)
-    }
-    return (
-        <Stack spacing={4}>
-
-            <Stack direction={'row'}>
-                <ToggleButtonGroup aria-label='text formatting' value={formats} onChange={handleToggle} size='small' color='success' orientation='vertical' exclusive>
-                    <ToggleButton value={'bold'} aria-label='bold'>
-                        <FormatBoldIcon />
-                    </ToggleButton>
-                    <ToggleButton value={'italic'} aria-label='italic'>
-                        <FormatItalicIcon />
-
-                    </ToggleButton>
-                    <ToggleButton value={'underlined'} aria-label='underlined'>
-                        <FormatUnderlinedIcon />
-                    </ToggleButton>
-                </ToggleButtonGroup>
-            </Stack>
-        </Stack >
-    )
+interface MuiButtonState {
+    formats: string | null;
 }
 
-export default MuiButton
+class MuiButton extends React.Component<{}, MuiButtonState> {
+    constructor(props: {}) {
+        super(props);
+        this.state = {
+            formats: null,
+        };
+    }
+
+    handleToggle = (_event: React.MouseEvent<HTMLElement>, updatedFormats: string | null) => {
+        this.setState({ formats: updatedFormats });
+    };
+
+    render() {
+        console.log({
+            formats: this.state.formats,
+        });
+
+        return (
+            <Stack spacing={4}>
+                <Stack direction="row">
+                    <ToggleButtonGroup
+                        aria-label="text formatting"
+                        value={this.state.formats}
+                        onChange={this.handleToggle}
+                        size="small"
+                        color="success"
+                        orientation="vertical"
+                        exclusive
+                    >
+                        <ToggleButton value="bold" aria-label="bold">
+                            <FormatBoldIcon />
+                        </ToggleButton>
+                        <ToggleButton value="italic" aria-label="italic">
+                            <FormatItalicIcon />
+                        </ToggleButton>
+                        <ToggleButton value="underlined" aria-label="underlined">
+                            <FormatUnderlinedIcon />
+                        </ToggleButton>
+                    </ToggleButtonGroup>
+                </Stack>
+            </Stack>
+        );
+    }
+}
+
+export default MuiButton;
