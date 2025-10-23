@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+}
+nav{
+    width: 100%;
+    padding: 20px;
+    color: brown;
+    background-color: antiquewhite;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+nav a{
+    text-decoration: none;
+}
+
+/* nav a.active{
+    font-weight: bold;
+    color: black;
+} */
+
