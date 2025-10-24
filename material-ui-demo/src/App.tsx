@@ -253,36 +253,49 @@
 
 
 
-import { AuthProdvider } from './utils/Auth'
-import Home from './Components/Home'
-import { Routes, Route } from 'react-router-dom'
-import About from './Components/About'
-import Navbar from './Components/Navbar'
-import Profile from './Components/Profile'
-import Login from './Routes/Login'
-import Products from './Components/Products'
-import Featuredproducts from './Components/Featuredproducts'
-import RequireAuth from './utils/RequireAuth'
-import ErrorBoundary from './Components/ErrorBoundary'
-import ErrorComponent from './Components/ErrorComponent'
+// import { AuthProdvider } from './utils/Auth'
+// import Home from './Components/Home'
+// import { Routes, Route } from 'react-router-dom'
+// import About from './Components/About'
+// import Navbar from './Components/Navbar'
+// import Profile from './Components/Profile'
+// import Login from './Routes/Login'
+// import Products from './Components/Products'
+// import Featuredproducts from './Components/Featuredproducts'
+// import RequireAuth from './utils/RequireAuth'
+// import ErrorBoundary from './Components/ErrorBoundary'
+// import ErrorComponent from './Components/ErrorComponent'
+// const App = () => {
+//   return (
+//     <AuthProdvider>
+//       <Navbar />
+//       <ErrorBoundary>
+//         <Routes>
+//           <Route path='/' element={<Home />} />
+//           <Route path='about' element={<About />} />
+//           <Route path='products' element={<Products />} >
+//             <Route path='featured' element={<Featuredproducts />} />
+//           </Route>
+//           <Route path='profile' element={<RequireAuth><Profile /></RequireAuth>} />
+//           <Route path='login' element={<Login />} />
+//           <Route path='/crash' element={<ErrorComponent />} />
+//         </Routes>
+//       </ErrorBoundary>
+//     </AuthProdvider>
+//   )
+// }
+
+// export default App
+import Button  from "./TypeScriptEx/PropsTypes";
+import Counter from "./TypeScriptEx/StateType";
 const App = () => {
   return (
-    <AuthProdvider>
-      <Navbar />
-      <ErrorBoundary>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='products' element={<Products />} >
-            <Route path='featured' element={<Featuredproducts />} />
-          </Route>
-          <Route path='profile' element={<RequireAuth><Profile /></RequireAuth>} />
-          <Route path='login' element={<Login />} />
-          <Route path='/crash' element={<ErrorComponent />} />
-        </Routes>
-      </ErrorBoundary>
-    </AuthProdvider>
-  )
-}
+    <div>
+      <Button label="Click Me" onClick={() => alert("Clicked!")} />
+      <Button label="Disabled" onClick={() => {}} disabled />
+        <Counter />
+    </div>
+  );
+};
 
-export default App
+export default App;
