@@ -1,13 +1,13 @@
 // import React from "react";
 
-// // 1. Define the props type
+// 1. Define the props type
 // interface ButtonProps {
 //   label: string;
 //   onClick: () => void;
 //   disabled?: boolean; // optional prop
 // }
 
-// // 2. Use it in a functional component
+// 2. Use it in a functional component
 // const Button: React.FC<ButtonProps> = ({ label, onClick, disabled }) => {
 //   return (
 //     <button onClick={onClick} disabled={disabled}>

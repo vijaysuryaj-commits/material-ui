@@ -286,16 +286,35 @@
 // }
 
 // export default App
-import Button  from "./TypeScriptEx/PropsTypes";
-import Counter from "./TypeScriptEx/StateType";
-const App = () => {
+// import Button  from "./TypeScriptEx/PropsTypes";
+// import Counter from "./TypeScriptEx/StateType";
+// const App = () => {
+//   return (
+//     <div>
+//       <Button label="Click Me" onClick={() => alert("Clicked!")} />
+//       <Button label="Disabled" onClick={() => {}} disabled />
+//         <Counter />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+//axios
+
+
+// import PostsList from './Components/PostsList'
+
+import './App.css'
+import PostForm from './Components/PostForm'
+function App() {
+  
   return (
     <div>
-      <Button label="Click Me" onClick={() => alert("Clicked!")} />
-      <Button label="Disabled" onClick={() => {}} disabled />
-        <Counter />
+      {/* <PostsList /> */}
+      <PostForm />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

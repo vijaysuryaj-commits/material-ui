@@ -6,7 +6,9 @@
 //   isAdmin?: boolean;
 // };
 
-// const user: User = { id: 1, name: "Vijay" };
+// const user: User = { 
+//       id: 1, name: "Vijay" 
+// };
 // console.log(user);  //{ id: 1, name: 'Vijay' }
 
 // type Status = "success" | "error" | "loading";

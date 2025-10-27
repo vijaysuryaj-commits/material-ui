@@ -17,11 +17,13 @@
 // function multiply(a: number, b: number): number {
 //   return a * b;
 // }
+// console.log(3,5)    //15
 
 // // Function with void return
 // function greet(name: string): void {
 //   console.log(`Hello, ${name}`);
 // }
+// greet("Vijay")  //Hello, Vijay
 
 // Optional parameter
 // function say(message?: string): void {  //void retrun type
@@ -55,11 +57,13 @@
 // format(42);      // "Value: 42"
 
 
-// function throwError(message: string): never { //always thows an error
+// function throwError(message: string): never { // never -> always thows an error
 //   throw new Error(message);
 // }
 // throwError("GG") throws error always
+
 //unknow type argumenets
+
 // function process(value: unknown) {
 //   if (typeof value === "string") {
 //     console.log(value.toUpperCase());
@@ -83,7 +87,7 @@
 //   return a + b;
 // }
 
-// combine(1, 2);       // 3Unsupported type
+// combine(1, 2);       // 3
 // combine("Hello, ", "World"); // "Hello, World"
 
 // //generic function -> reusable for multiple types

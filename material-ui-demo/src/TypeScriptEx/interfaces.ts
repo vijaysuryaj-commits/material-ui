@@ -72,7 +72,7 @@
 
 //in ts interfaces can extend class
 class Person {
-    public name: string;
+    public name: string='';
 }
 
 interface Details extends Person {
@@ -80,6 +80,7 @@ interface Details extends Person {
 }
 
 class Person_Details extends Person implements Details {
+    age: any;
     details(): void {
         this.name = "Vijay";
         this.age=21
